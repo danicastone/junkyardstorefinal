@@ -14,7 +14,8 @@ class OrderItem < ActiveRecord::Base
   end
   def total_price
     unit_price * quantity
-  end private
+  end 
+private
   def product_present
     if product.nil?
       errors.add(:product, "is not valid or is not active.")

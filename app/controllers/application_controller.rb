@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+#  before_action :authenticate_user!  
+#  if we want to force people to login first
+
   helper_method :current_order
   def current_order
     if !session[:order_id].nil?

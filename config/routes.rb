@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  
   get 'order_items/create'
 
   get 'order_items/update'
@@ -15,8 +15,18 @@ Rails.application.routes.draw do
   resources :order_items, only: [:create, :update, :destroy]
   root to: "products#index"
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+
+  devise_for :users do
+    get "/login" => "devise/sessions#new"
+    get "/register" => "devise/registrations#new"
+  end
+
+
+
+   
+  # The priority is based upon order of creation: first created -> highest priority. See how all your routes lay out with 
+  # "rake routes".
+
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

@@ -3,6 +3,7 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string :name
       t.decimal :price, precision: 12, scale: 3
+      t.string :description
       t.boolean :active
 
       t.timestamps null: false

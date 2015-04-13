@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'products/index'
 
+  get 'products/new'
+
   resources :products, only: [:index, :create, :update, :destroy]
   resource :cart, only: [:show] 
   resources :order_items, only: [:create, :update, :destroy]

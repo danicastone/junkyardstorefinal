@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'manage/products'
+
+  resources :payments
+
   get 'order_items/create'
 
   get 'order_items/update'
@@ -12,7 +16,9 @@ Rails.application.routes.draw do
 
   get 'products/new'
 
-  resources :products, only: [:index, :create, :update, :destroy]
+  get 'manage/index'
+
+  resources :products
   resource :cart, only: [:show] 
   resources :order_items, only: [:create, :update, :destroy]
   root to: "products#index"

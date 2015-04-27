@@ -79,6 +79,6 @@ Rails.application.configure do
 
   config.stripe.secret_key = 'sk_live_lvhAiMjFPgTjpDTDKDFj9uZz'
   config.stripe.publishable_key = 'pk_live_h68v5iuUiP7ehf0KmHJq9mUC'
-  config.stripe.eager_load = [heforklift@gmail.com]
+  config.stripe.eager_load = ['user']
 
 end

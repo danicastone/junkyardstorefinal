@@ -9,6 +9,7 @@ gem 'jbuilder', '2.2.3'
 gem 'devise'
 gem 'redis', '~>3.0.1'
 gem 'hiredis', '~>0.4.5'
+gem 'stripe-rails'
 gem 'sdoc', '0.4.0', group: :doc 
 
 group :development, :test do

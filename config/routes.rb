@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   
+  resources :sales
+
   get 'manage/products'
 
   resources :payments
 
-  get 'order_items/create'
+g  get 'order_items/create'
 
   get 'order_items/update'
 
@@ -87,4 +89,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
+get '/buy/:permalink', to: 'transactions#new', as: :show_buy post '/buy/:permalink', to: 'transactions#create', as: :buy
+get  '/pickup/:guid',   to: 'transactions#pickup',   as: :pickup

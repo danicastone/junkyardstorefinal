@@ -81,4 +81,16 @@ Rails.application.configure do
   config.stripe.publishable_key = 'pk_live_h68v5iuUiP7ehf0KmHJq9mUC'
   config.stripe.eager_load = ['user']
 
+  config.action_mailer.delivery_method = :smtp config.action_mailer.smtp_settings = {
+    address: 'smtp.mandrillapp.com',
+    port: 587,
+    user_name: ENV['MANDRILL_USERNAME'],
+    password: ENV['MANDRILL_APIKEY'],
+    domain: 'heroku.com',
+    authentication: :plain
+  }
+  config.action_mailer.default_url_options = {
+    :host => 'your-app.herokuapp.com'
+  }
+
 end

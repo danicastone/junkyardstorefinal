@@ -1,5 +1,7 @@
 Rails.application.configure do
 
+ENV["REDISTOGO_URL"] = 'redis://username:password@my.host:6789' 
+
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Settings specified here will take precedence over those in config/application.rb.

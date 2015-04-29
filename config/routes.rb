@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :payments
 
-g  get 'order_items/create'
+  get 'order_items/create'
 
   get 'order_items/update'
 
@@ -23,6 +23,8 @@ g  get 'order_items/create'
   resources :products
   resource :cart, only: [:show] 
   resources :order_items, only: [:create, :update, :destroy]
+  resources :charges
+
   root to: "products#index"
 
 
@@ -90,5 +92,7 @@ g  get 'order_items/create'
   #     resources :products
   #   end
 
-get '/buy/:permalink', to: 'transactions#new', as: :show_buy post '/buy/:permalink', to: 'transactions#create', as: :buy
+get '/buy/:permalink', to: 'transactions#new', as: :show_buy 
+post '/buy/:permalink', to: 'transactions#create', as: :buy
 get  '/pickup/:guid',   to: 'transactions#pickup',   as: :pickup
+end

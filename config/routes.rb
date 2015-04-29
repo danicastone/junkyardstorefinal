@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :payments
 
-g  get 'order_items/create'
+  get 'order_items/create'
 
   get 'order_items/update'
 

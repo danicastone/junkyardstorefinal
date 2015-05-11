@@ -77,9 +77,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.stripe.secret_key = 'sk_live_lvhAiMjFPgTjpDTDKDFj9uZz'
-  config.stripe.publishable_key = 'pk_live_h68v5iuUiP7ehf0KmHJq9mUC'
-  config.stripe.eager_load = ['user']
+#  config.stripe.secret_key = 'sk_live_lvhAiMjFPgTjpDTDKDFj9uZz'
+#  config.stripe.publishable_key = 'pk_live_h68v5iuUiP7ehf0KmHJq9mUC'
+#  config.stripe.eager_load = ['user']
 
   config.action_mailer.delivery_method = :smtp 
   config.action_mailer.smtp_settings = {

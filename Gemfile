@@ -12,7 +12,7 @@ gem 'devise'
 gem 'redis', '~>3.0.1'
 gem 'hiredis', '~>0.4.5'
 gem 'rest-client'
-gem 'stripe', :git => `https://github.com/stripe/stripe-ruby`
+gem 'stripe'
 gem 'whenever', require: false
 gem 'sdoc', '0.4.0', group: :doc 
 gem 'dotenv-rails', :groups => [:development, :test]

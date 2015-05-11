@@ -1,5 +1,4 @@
 source 'https://rubygems.org' 
-source 'https://code.stripe.com'
 
 gem 'rails', '4.2.0' 
 gem 'sass'
@@ -13,7 +12,7 @@ gem 'devise'
 gem 'redis', '~>3.0.1'
 gem 'hiredis', '~>0.4.5'
 gem 'rest-client'
-gem 'stripe'
+gem 'stripe', :git => `https://github.com/stripe/stripe-ruby`
 gem 'whenever', require: false
 gem 'sdoc', '0.4.0', group: :doc 
 gem 'dotenv-rails', :groups => [:development, :test]

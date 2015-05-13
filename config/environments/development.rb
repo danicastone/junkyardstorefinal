@@ -1,6 +1,6 @@
 Rails.application.configure do
 
-#ENV["REDISTOGO_URL"] = 'redis://redistogo:b85e09a83b93927afc85322a6bbd4540@grouper.redistogo.com:10744/' 
+  ENV["REDISTOGO_URL"] = 'redis://redistogo:b85e09a83b93927afc85322a6bbd4540@grouper.redistogo.com:10744/' 
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 

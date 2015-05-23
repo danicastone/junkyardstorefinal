@@ -1,5 +1,4 @@
 class CartsController < ApplicationController
-#require 'redis'
 
   before_action :authenticate_user!
 
@@ -9,12 +8,12 @@ class CartsController < ApplicationController
   end
 
   def add
-    $redis.sadd current_user_cart, params[:product_id]
+    $redis.SADD current_user_cart, params[:product_id]
     render json: current_user.cart_count, status: 200
   end
  
   def remove
-    $redis.srem current_user_cart, params[:product_id]
+    $redis.SREM current_user_cart, params[:product_id]
     render json: current_user.cart_count, status: 200
   end
  

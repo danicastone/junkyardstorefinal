@@ -13,6 +13,7 @@ gem 'devise'
 gem 'redis'
 gem 'hiredis', '~>0.4.5'
 gem 'rest-client'
+gem 'paperclip'
 gem 'stripe'
 gem 'whenever', require: false
 gem 'sdoc', '0.4.0', group: :doc 

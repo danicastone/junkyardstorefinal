@@ -3,9 +3,9 @@ class ChargesController < ApplicationController
     # this will remain empty unless you need to set some instance variables to pass on
   end
  
-  def create
+#  def create
     # Amount in cents
-    @amount = params[:stripeAmount].to_i * 100
+#    @amount = params[:stripeAmount].to_i * 100
 
     #fetch the customer 
 #    customer = Stripe::Customer.retrieve(stripe_card_token)
@@ -13,9 +13,9 @@ class ChargesController < ApplicationController
     # Create the customer in Stripe
 #    card_fingerprint = Stripe::Token.retrieve(stripe_card_token).try(:card).try(:fingerprint) 
 
-    customer = Stripe::Customer.create({
+#    customer = Stripe::Customer.create({
    # check whether a card with that fingerprint already exists 
-      email: params[:stripeEmail],  
+#      email: params[:stripeEmail],  
 #      default_card = customer.cards.all.data.select{|card| card.fingerprint == card_fingerprint}.last
  #       if card_fingerprint == card: params[:stripeToken]
         #create new card if it does not already exist
@@ -25,16 +25,23 @@ class ChargesController < ApplicationController
 #          customer.default_card = default_card.id)
 
     charge = Stripe::Charge.create(
-      :customer => customer.id, 
+      customer = Stripe::Customer.create(description: email, card: stripe_card_token), 
       :amount => @amount,
       :description => 'Rails Stripe customer',
       :currency => 'usd',
-      customer.save
     )
  
-    # place more code upon successfully creating the charge
-  rescue Stripe::CardError => e
-    flash[:error] = e.message
+  def create 
+    charge = Stripe::Charge.create(
+      :amount => (params[:amount].to_f * 100).abs.to_i, 
+      currency => "usd", 
+      card => params[:stripeToken],
+      description => params[:email]
+    ) 
+    @amount = params[:amount] 
+    @payment_id = charge.id 
+  rescue Stripe::CardError => e 
+    flash[:error] = e.message 
     redirect_to charges_path
     flash[:notice] = "Please try again"
   end

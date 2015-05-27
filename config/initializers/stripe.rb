@@ -6,6 +6,8 @@
 #DO NOT USE: 
 #Stripe.api_key = Rails.configuration.stripe.secret_key
 
+#Stripe.api_key = sk_test_03TVUwoWwKqs8frDinxUa0DQ
+
 Rails.configuration.stripe = {
   :publishable_key => ENV['STRIPE_PUBLISHABLE_KEY'],
   :secret_key => ENV['STRIPE_SECRET_KEY'],

@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
   
-  resources :sales
+  resources :charges
 
   get 'manage/products'
-
-  resources :payments
 
   get 'order_items/create'
 

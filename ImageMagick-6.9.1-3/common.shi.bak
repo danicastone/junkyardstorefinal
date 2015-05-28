@@ -1,0 +1,21 @@
+# Test environment
+top_srcdir='/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3'
+top_builddir='/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3'
+
+set -a
+COMPARE="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/utilities/compare"
+COMPOSITE="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/utilities/composite"
+CONJURE="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/utilities/conjure"
+CONVERT="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/utilities/convert"
+DISPLAY="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/utilities/display"
+IDENTIFY="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/utilities/identify"
+MONTAGE="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/utilities/montage" 
+VALIDATE="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/tests/validate"
+DRAWTEST="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/tests/drawtest"
+WANDTEST="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/tests/wandtest"
+LD_LIBRARY_PATH="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/coders"
+MAGICK_CONFIGURE_PATH="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/config:/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/config"
+MAGICK_FILTER_MODULE_PATH="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/filters"
+PATH="/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/utilities:/home/ubuntu/workspace/junkyardstorefinal/ImageMagick-6.9.1-3/tests:${PATH}"
+set +a

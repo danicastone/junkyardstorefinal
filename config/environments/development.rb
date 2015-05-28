@@ -1,7 +1,7 @@
 Rails.application.configure do
 
   ENV["REDISTOGO_URL"] = 'redis://redistogo:b85e09a83b93927afc85322a6bbd4540@grouper.redistogo.com:10744/' 
-
+ Paperclip.options[:command_path] = "/usr/local/bin/"
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Settings specified here will take precedence over those in config/application.rb.

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-  resources :charges
-
   get 'manage/products'
 
   get 'order_items/create'
@@ -12,9 +10,11 @@ Rails.application.routes.draw do
 
   get 'carts/show'
 
-  get 'products/index'
+#  get 'products/index'
 
-  get 'products/new'
+#  get 'products/show'
+
+#  get 'products/new'
 
   get 'manage/index'
 
@@ -24,7 +24,6 @@ Rails.application.routes.draw do
   resources :charges
 
   root to: "products#index"
-
 
   devise_for :users do
     get "/login" => "devise/sessions#new"

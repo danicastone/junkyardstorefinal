@@ -21,6 +21,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.update_attributes(product_params)
     redirect_to products_path
+    @product.save!
   end
 
   def destroy

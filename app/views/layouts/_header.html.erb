@@ -1,33 +1,13 @@
-<div class="row">
-  <nav class="top-bar column" data-topbar>
- 
-      <ul class="title-area"> 
-<!-- 
-<li class="name"/>
-          <h1>
-            <a href="/">
-              <i class="fi-play-video"></i> MovieStore
-            </a>
-          </h1>
-        </li>
-        <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
-      </ul>
- -->
-      <section class="top-bar-section">
-        
+<center>
           <%if signed_in?%>
-            <li><%=link_to current_user.email, edit_user_registration_path%> | <%=link_to "Logout", destroy_user_session_path, method: :delete%></li>
+            <div id="logo"><%=link_to "Logout", destroy_user_session_path, method: :delete%> * <%=link_to "View Account", edit_user_registration_path%></div>
          <%else%>
-           <li><%=link_to "Register", new_user_registration_path, :class => 'navbar-link' %> | <%=link_to "Login", new_user_session_path, :class => 'navbar-link' %></li>
+           <div id="logo"><%=link_to "Register", new_user_registration_path, :class => 'navbar-link' %></div> <div id=logo><%=link_to "Login", new_user_session_path, :class => 'navbar-link' %></div>
         <%end%>
-
-
-<!--
-          <li><%=link_to "Register", "#" %></li>
-          <li><%=link_to "Login", "#" %></li>
--->
-        </ul>
-      </section>
- 
-    </nav>
-</div>
+        <br />        
+      <br />
+         <div id="logo">
+           <%= image_tag("HydraulicElectroLogo.jpg", :alt => "Hydraulic Electro Services, Inc.", width: "750", height: "180", class: "displayed") %>
+</p>      </div>
+ </div>
+</center>    
